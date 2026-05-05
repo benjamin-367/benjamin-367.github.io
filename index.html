@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paraguay Websites | Professionelle Webseiten ab 249€ + 39€/Monat</title>
+
+<meta name="description" content="Moderne, schnelle und verkaufsstarke Webseiten für Unternehmen, Startups und Blogs. Einmalig ab 249€ + 39€/Monat für Wartung & Updates. Mobil optimiert, SEO-ready und kundenorientiert.">
+<meta name="keywords" content="Webdesign, Website erstellen lassen, günstige Webseite, Paraguay Webdesign, Business Website, SEO optimierte Website, responsive Webdesign, Website ab 249 Euro, monatliche Website Wartung">
+<meta name="author" content="Paraguay Websites">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Paraguay Websites | Webseiten ab 249€ + 39€/Monat">
+<meta property="og:description" content="Professionelle Websites für Businesses & Startups. Schnell, modern, mobil optimiert und SEO-ready. Jetzt ab 249€ + 39€/Monat.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://paraguaywebsite.org">
+<meta property="og:image" content="https://paraguaywebsite.org/preview.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #06080f;
+    --bg2: #0d1117;
+    --surface: #111827;
+    --surface2: #1a2332;
+    --border: rgba(255,255,255,0.07);
+    --accent: #00e5a0;
+    --accent2: #0099ff;
+    --accent3: #7c3aed;
+    --text: #f0f4ff;
+    --muted: #8899b0;
+    --white: #ffffff;
+    --font-head: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ── CURSOR ── */
+  .cursor {
+    width: 12px; height: 12px;
+    background: var(--accent);
+    border-radius: 50%;
+    position: fixed; top: 0; left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%,-50%);
+    transition: transform 0.1s, width 0.2s, height 0.2s, background 0.2s;
+    mix-blend-mode: screen;
+  }
+  .cursor-ring {
+    width: 36px; height: 36px;
+    border: 1.5px solid var(--accent);
+    border-radius: 50%;
+    position: fixed; top: 0; left: 0;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%,-50%);
+    transition: transform 0.18s cubic-bezier(0.22,1,0.36,1), width 0.25s, height 0.25s, opacity 0.2s;
+    opacity: 0.5;
+  }
+  body:hover .cursor, body:hover .cursor-ring { opacity: 1; }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    z-index: 1000;
+    padding: 20px 40px;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(6,8,15,0.8);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+    transition: background 0.3s;
+  }
+  .nav-logo {
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: 1.25rem;
+    color: var(--white);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+  }
+  .nav-logo span { color: var(--accent); }
+  .nav-links {
+    display: flex; gap: 32px; list-style: none;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: var(--muted);
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--accent); }
+  .nav-cta {
+    background: var(--accent);
+    color: #06080f;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 0.875rem;
+    padding: 10px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    box-shadow: 0 0 0 rgba(0,229,160,0);
+  }
+  .nav-cta:hover {
+    background: #00ffc2;
+    transform: translateY(-1px);
+    box-shadow: 0 0 24px rgba(0,229,160,0.35);
+  }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+  .hamburger span { display: block; width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: 0.3s; }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    padding: 120px 40px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 60% 40%, rgba(0,229,160,0.07) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 50% at 20% 80%, rgba(0,153,255,0.06) 0%, transparent 55%),
+      radial-gradient(ellipse 40% 40% at 80% 80%, rgba(124,58,237,0.05) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .grid-lines {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+    mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 0%, transparent 80%);
+  }
+  .hero-inner {
+    max-width: 860px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(0,229,160,0.1);
+    border: 1px solid rgba(0,229,160,0.25);
+    border-radius: 100px;
+    padding: 6px 16px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--accent);
+    margin-bottom: 28px;
+    letter-spacing: 0.04em;
+    animation: fadeUp 0.7s both;
+  }
+  .hero-badge::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%,100%{opacity:1;transform:scale(1)}
+    50%{opacity:0.5;transform:scale(1.5)}
+  }
+  .hero-h1 {
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: clamp(2.8rem, 7vw, 4rem);
+    line-height: 1.04;
+    letter-spacing: -0.03em;
+    color: var(--white);
+    margin-bottom: 24px;
+    animation: fadeUp 0.7s 0.1s both;
+  }
+  .hero-h1 .line-green { color: var(--accent); }
+  .hero-h1 .line-blue { color: var(--accent2); }
+  .hero-sub {
+    font-size: 1.15rem;
+    color: var(--muted);
+    max-width: 560px;
+    margin: 0 auto 40px;
+    font-weight: 300;
+    animation: fadeUp 0.7s 0.2s both;
+  }
+  .hero-btns {
+    display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;
+    animation: fadeUp 0.7s 0.3s both;
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: #06080f;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 15px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none; cursor: pointer;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .btn-primary:hover {
+    background: #00ffc2;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(0,229,160,0.3);
+  }
+  .btn-secondary {
+    background: transparent;
+    color: var(--text);
+    font-family: var(--font-head);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 15px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: border-color 0.2s, transform 0.15s;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .btn-secondary:hover {
+    border-color: rgba(255,255,255,0.25);
+    transform: translateY(-2px);
+  }
+  .hero-stats {
+    display: flex; gap: 40px; justify-content: center; margin-top: 60px;
+    animation: fadeUp 0.7s 0.45s both;
+  }
+  .stat {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .stat-num {
+    font-family: var(--font-head);
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--white);
+  }
+  .stat-num span { color: var(--accent); }
+  .stat-label { font-size: 0.8rem; color: var(--muted); margin-top: 2px; }
+  .hero-scroll {
+    position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 6px;
+    animation: fadeUp 0.7s 0.6s both;
+    opacity: 0.5;
+    font-size: 0.75rem; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase;
+  }
+  .scroll-line {
+    width: 1px; height: 40px;
+    background: linear-gradient(to bottom, var(--accent), transparent);
+    animation: scrollDown 1.5s ease-in-out infinite;
+  }
+  @keyframes scrollDown {
+    0%{transform:scaleY(0);transform-origin:top}
+    50%{transform:scaleY(1);transform-origin:top}
+    51%{transform-origin:bottom}
+    100%{transform:scaleY(0);transform-origin:bottom}
+  }
+
+  @keyframes fadeUp {
+    from { opacity:0; transform: translateY(28px); }
+    to   { opacity:1; transform: translateY(0); }
+  }
+
+  /* ── SECTIONS SHARED ── */
+  section { padding: 100px 40px; }
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+  .section-title {
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: -0.025em;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  .section-sub {
+    color: var(--muted);
+    font-size: 1.05rem;
+    font-weight: 300;
+    max-width: 500px;
+    margin-bottom: 60px;
+  }
+  .container { max-width: 1100px; margin: 0 auto; }
+
+  /* ── SERVICES ── */
+  #services { background: var(--bg2); }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+  }
+  .service-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 32px;
+    transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+    position: relative;
+    overflow: hidden;
+  }
+  .service-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.35s ease;
+  }
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(0,229,160,0.2);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  }
+  .service-icon {
+    width: 48px; height: 48px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+  .si-1 { background: rgba(0,229,160,0.12); }
+  .si-2 { background: rgba(0,153,255,0.12); }
+  .si-3 { background: rgba(124,58,237,0.12); }
+  .si-4 { background: rgba(255,149,0,0.12); }
+  .service-name {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+  .service-desc { color: var(--muted); font-size: 0.9rem; line-height: 1.6; }
+
+  /* ── PRICING ── */
+  #pricing { background: var(--bg); }
+  .pricing-wrapper {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .pricing-card {
+    background: var(--surface);
+    border: 1px solid rgba(0,229,160,0.3);
+    border-radius: 20px;
+    padding: 50px 48px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 80px rgba(0,229,160,0.07);
+  }
+  .pricing-card::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% -10%, rgba(0,229,160,0.08) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .pricing-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(0,229,160,0.15);
+    border: 1px solid rgba(0,229,160,0.3);
+    color: var(--accent);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 100px;
+    margin-bottom: 28px;
+  }
+  .pricing-price {
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: 4rem;
+    color: var(--white);
+    letter-spacing: -0.04em;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .pricing-price sup { font-size: 1.8rem; vertical-align: top; margin-top: 12px; display: inline-block; }
+  .pricing-once {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-bottom: 36px;
+  }
+  .pricing-features { list-style: none; margin-bottom: 40px; }
+  .pricing-features li {
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.95rem;
+    color: var(--text);
+  }
+  .pricing-features li:last-child { border-bottom: none; }
+  .check {
+    width: 20px; height: 20px; min-width: 20px;
+    background: rgba(0,229,160,0.12);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--accent);
+    font-size: 0.7rem;
+    margin-top: 2px;
+  }
+  .pricing-note {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.82rem;
+    margin-top: 16px;
+  }
+
+  /* ── DOMAIN INFO MODAL ── */
+  .domain-info-trigger {
+    appearance: none;
+    border: 0;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    cursor: pointer;
+    font-weight: 700;
+  }
+  .domain-info-trigger:hover { color: var(--accent2); }
+
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.62);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 3500;
+    padding: 60px 30px;
+  }
+  .modal-overlay.open { display: flex; }
+  .modal {
+    width: min(1020px, 85%);
+    max-height: 90vh;
+    overflow-y: auto;
+    background: linear-gradient(135deg, var(--surface) 0%, var(--surface2) 100%);
+    border: 2px solid rgba(0,229,160,0.22);
+    border-radius: 18px;
+    box-shadow: 0 18px 60px rgba(0,0,0,0.55);
+    padding: 14px 14px 12px;
+    position: relative;
+  }
+  .modal-title {
+    font-family: var(--font-head);
+    color: var(--white);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+  .modal-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: rgba(255,255,255,0.03);
+    color: var(--muted);
+    cursor: pointer;
+    transition: transform 0.15s, border-color 0.2s, color 0.2s, background 0.2s;
+  }
+  .modal-close:hover {
+    transform: translateY(-1px);
+    border-color: rgba(0,229,160,0.25);
+    color: var(--text);
+    background: rgba(0,229,160,0.08);
+  }
+  .modal-body {
+    color: var(--text);
+    font-size: 0.98rem;
+    line-height: 1.75;
+  }
+  .modal-body p { margin: 10px 0; }
+  .modal-body .muted { color: var(--muted); }
+  .modal-body .example {
+    margin: 12px 0;
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: rgba(0,0,0,0.18);
+  }
+  .modal-body ul { margin: 8px 0 0 18px; }
+  .modal-body li { margin: 4px 0; }
+
+  /* ── ABOUT ── */
+  #about { background: var(--bg2); }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .about-visual {
+    position: relative;
+  }
+  .about-avatar-wrap {
+    width: 280px; height: 280px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .about-avatar-bg {
+    width: 100%; height: 100%;
+    border-radius: 24px;
+    background: linear-gradient(135deg, var(--surface) 0%, var(--surface2) 100%);
+    border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 7rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .about-avatar-bg::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(0,229,160,0.1), transparent 60%);
+  }
+  .about-float-badge {
+    position: absolute;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: flex; align-items: center; gap: 8px;
+    animation: float 3s ease-in-out infinite;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  }
+  .badge-tl { top: -16px; left: -16px; animation-delay: 0s; }
+  .badge-br { bottom: -16px; right: -16px; animation-delay: 1.5s; }
+  @keyframes float {
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-8px)}
+  }
+  .about-text .section-sub { margin-bottom: 28px; }
+  .about-highlight {
+    display: flex; align-items: flex-start; gap: 14px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px;
+    margin-bottom: 14px;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .about-highlight:hover {
+    border-color: rgba(0,229,160,0.25);
+    transform: translateX(4px);
+  }
+  .hl-icon { font-size: 1.4rem; min-width: 32px; }
+  .hl-text strong { display: block; color: var(--white); font-size: 0.95rem; margin-bottom: 2px; }
+  .hl-text span { color: var(--muted); font-size: 0.85rem; }
+
+  /* ── TESTIMONIALS ── */
+  #testimonials { background: var(--bg); }
+  .testi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .testi-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 28px;
+    transition: transform 0.25s, border-color 0.25s;
+  }
+  .testi-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(0,229,160,0.15);
+  }
+  .testi-stars { color: #ffb800; font-size: 0.9rem; margin-bottom: 16px; letter-spacing: 2px; }
+  .testi-text {
+    color: var(--text);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+  .testi-author { display: flex; align-items: center; gap: 12px; }
+  .testi-avatar {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 1rem;
+    color: #06080f;
+    font-family: var(--font-head);
+  }
+  .testi-name { font-weight: 600; font-size: 0.9rem; color: var(--white); }
+  .testi-role { font-size: 0.78rem; color: var(--muted); }
+
+  /* ── FAQ ── */
+  #faq { background: var(--bg2); }
+  .faq-list { max-width: 700px; }
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    overflow: hidden;
+  }
+  .faq-q {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 22px 0;
+    cursor: pointer;
+    font-family: var(--font-head);
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--white);
+    user-select: none;
+    gap: 16px;
+    transition: color 0.2s;
+  }
+  .faq-q:hover { color: var(--accent); }
+  .faq-arrow {
+    min-width: 22px; height: 22px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--muted);
+    font-size: 0.9rem;
+    transition: transform 0.3s, border-color 0.2s, background 0.2s;
+  }
+  .faq-item.open .faq-arrow {
+    transform: rotate(45deg);
+    border-color: var(--accent);
+    background: rgba(0,229,160,0.1);
+    color: var(--accent);
+  }
+  .faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s;
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+  .faq-a p {
+  margin-bottom: 12px;
+}
+  .faq-item.open .faq-a { max-height: 300px; padding-bottom: 20px; }
+
+  /* ── CONTACT ── */
+  #contact { background: var(--bg); }
+  .contact-inner {
+    background: var(--surface);
+    border: 1px solid rgba(0,229,160,0.2);
+    border-radius: 20px;
+    padding: 60px;
+    text-align: center;
+    max-width: 660px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
+  .contact-inner::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% -10%, rgba(0,229,160,0.08), transparent 60%);
+    pointer-events: none;
+  }
+  .contact-icon { font-size: 3.5rem; margin-bottom: 20px; }
+  .contact-inner .section-title { margin-bottom: 12px; }
+  .contact-inner .section-sub { margin: 0 auto 36px; }
+  .whatsapp-btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: #25D366;
+    color: #fff;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 1.05rem;
+    padding: 16px 36px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    box-shadow: 0 8px 24px rgba(37,211,102,0.2);
+  }
+  .whatsapp-btn:hover {
+    background: #20ba59;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 36px rgba(37,211,102,0.35);
+  }
+  .whatsapp-icon { font-size: 1.3rem; }
+  .contact-number {
+    margin-top: 20px;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+  .contact-number strong { color: var(--text); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--bg2);
+    border-top: 1px solid var(--border);
+    padding: 36px 40px;
+    text-align: center;
+  }
+  .footer-logo {
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+  .footer-logo span { color: var(--accent); }
+  footer p { color: var(--muted); font-size: 0.82rem; }
+
+  /* ── GLOBAL RESPONSIVE SAFEGUARDS ── */
+  img, svg, video, canvas { max-width: 100%; height: auto; }
+  .container { padding-left: 0; padding-right: 0; }
+  h1, h2, h3, p, a, li, button { overflow-wrap: anywhere; }
+  /* Prevent any accidental horizontal scrolling on mobile */
+  body { max-width: 100%; }
+
+  /* ── SCROLL REVEAL ── */
+  .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .about-grid { grid-template-columns: 1fr; }
+    .about-visual { display: none; }
+    nav { padding: 16px 24px; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .mobile-menu {
+      display: none;
+      position: fixed; inset: 0;
+      background: var(--bg);
+      z-index: 2000;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-family: var(--font-head);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--text);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .mobile-menu a:hover { color: var(--accent); }
+    .close-menu {
+      position: absolute; top: 20px; right: 24px;
+      font-size: 1.6rem; cursor: pointer; color: var(--muted);
+    }
+    section { padding: 80px 24px; }
+    .contact-inner { padding: 40px 24px; }
+    .pricing-card { padding: 36px 28px; }
+    .hero-stats { gap: 24px; flex-wrap: wrap; }
+    .cursor, .cursor-ring { display: none; }
+    .modal-overlay { padding: 50px 18px; }
+    .modal { width: min(1020px, 94vw); }
+  }
+
+  /* ── SMALL TABLETS / LARGE PHONES ── */
+  @media (max-width: 720px) {
+    #hero { padding: 110px 20px 70px; }
+    .hero-sub { font-size: 1.05rem; }
+    .hero-stats { margin-top: 44px; }
+    .contact-inner { padding: 34px 20px; }
+    footer { padding: 30px 20px; }
+  }
+
+  /* ── PHONES ── */
+  @media (max-width: 520px) {
+    nav { padding: 14px 16px; }
+    .nav-logo { font-size: 1.05rem; }
+    /* On small phones logo + CTA + burger won't fit reliably */
+    .nav-cta { display: none; }
+    .nav-cta { padding: 9px 14px; font-size: 0.85rem; }
+    #hero { padding: 104px 16px 64px; }
+    .hero-badge { padding: 6px 12px; font-size: 0.78rem; text-align: center; }
+    .hero-btns { gap: 12px; }
+    .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+    .hero-stats { flex-direction: column; gap: 18px; }
+    section { padding: 70px 16px; }
+    .service-card { padding: 24px; }
+    .pricing-card { padding: 30px 20px; border-radius: 16px; }
+    .pricing-price { font-size: 3.1rem; }
+    .pricing-price sup { font-size: 1.35rem; margin-top: 10px; }
+    .whatsapp-btn { width: 100%; justify-content: center; padding: 16px 18px; }
+    .modal { padding: 12px; }
+    .modal-close { width: 38px; height: 38px; }
+  }
+
+  /* ── VERY SMALL PHONES ── */
+  @media (max-width: 360px) {
+    .hero-h1 { font-size: 2.35rem; }
+    .pricing-price { font-size: 2.85rem; }
+    .mobile-menu a { font-size: 1.25rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-logo">Paraguay<span>.</span>Websites</a>
+  <ul class="nav-links">
+    <li><a href="#services">Leistungen</a></li>
+    <li><a href="#pricing">Preise</a></li>
+    <li><a href="#about">Über mich</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Jetzt anfragen</a>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <span class="close-menu" onclick="toggleMenu()">✕</span>
+  <a href="#services" onclick="toggleMenu()">Leistungen</a>
+  <a href="#pricing" onclick="toggleMenu()">Preise</a>
+  <a href="#about" onclick="toggleMenu()">Über mich</a>
+  <a href="#testimonials" onclick="toggleMenu()">Referenzen</a>
+  <a href="#faq" onclick="toggleMenu()">FAQ</a>
+  <a href="#contact" onclick="toggleMenu()">Kontakt</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="grid-lines"></div>
+  <div class="hero-inner">
+    <div class="hero-badge">🌎 Websites für deutschsprachige Kunden weltweit</div>
+    <h1 class="hero-h1">
+      Meine Websites<br>
+      <span class="line-green">bringen dir Kunden und Online-Auftritt</span> —<br>
+      <span class="line-blue">nur 249 €</span>
+    </h1>
+    <p class="hero-sub">Moderne Websiten für kleine Unternehmen, die Kunden bringen – <strong>249€ einmalig</strong> + <strong>39€ / Monat</strong> Website-Management</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-primary">
+        <span>🚀</span> Jetzt Website erstellen lassen
+      </a>
+    
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">249<span>€</span></div>
+        <div class="stat-label">Einmalig</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">14<span>T</span></div>
+        <div class="stat-label">Maximale Lieferzeit</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">39<span>€</span></div>
+        <div class="stat-label">Monatliche Wartung</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    Scroll
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <p class="section-label reveal">Was ich anbiete</p>
+    <h2 class="section-title reveal">Keine Zeitverschwendung.
+    <br></h2>
+    <p class="section-sub reveal">Nur Websites, die <u>verkaufen</u> und gut aussehen.</p>
+    <div class="services-grid">
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-icon si-1">🏢</div>
+        <div class="service-name">Unternehmenswebsite</div>
+        <div class="service-desc">Ein professioneller Auftritt, der Vertrauen schafft und neue Anfragen möglich macht.</div>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-icon si-2">🚀</div>
+        <div class="service-name">Startup-Landing-Page</div>
+        <div class="service-desc">Eine klare Seite für Angebote, die schnell sichtbar und verständlich sein müssen.</div>
+      </div>
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-icon si-3">📰</div>
+        <div class="service-name">Informationsseite</div>
+        <div class="service-desc">Klar strukturiert, leicht lesbar und für Besucher sofort verständlich.</div>
+      </div>
+      <div class="service-card reveal reveal-delay-4">
+        <div class="service-icon si-4">✍️</div>
+        <div class="service-name">Blog & Content-Site</div>
+        <div class="service-desc">Lesefreundlich aufgebaut und für bessere Sichtbarkeit bei Google vorbereitet.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="container">
+    <p class="section-label reveal">Transparenter Preis</p>
+    <h2 class="section-title reveal">Alles inklusive.<br>Keine Überraschungen.</h2>
+    <p class="section-sub reveal">Einmalig <strong>249€</strong> für die Website + <strong>39€ / Monat</strong> Website-Management. Sonderangebot: bei Jahreszahlung <strong>2 Monate gratis</strong>.</p>
+    <div class="pricing-wrapper">
+      <div class="pricing-card reveal">
+        <div class="pricing-badge">⭐ Komplettpaket</div>
+        <div class="pricing-price"><sup>€</sup>249</div>
+        <div class="pricing-once">Einmalig für die Website</div>
+        <div class="pricing-once" style="margin-top:-18px;"><strong>+ 39€ / Monat</strong> Website-Management <span style="color:var(--muted);font-weight:400;">(Sonderangebot: bei Jahreszahlung 2 Monate gratis)</span></div>
+        <ul class="pricing-features">
+          <li><span class="check">✓</span> Individuelles, modernes Design (🚫Keine Templates)</li>
+          <li><span class="check">✓</span> Vollständig responsive (Mobil, Tablet, Desktop)</li>
+          <li><span class="check">✓</span> Bis zu 5 Unterseiten</li>
+          <li><span class="check">✓</span> Schnelle Ladezeiten & SEO-Grundlagen</li>
+          <li><span class="check">✓</span> Kontaktformular oder WhatsApp-Integration</li>
+          <li><span class="check">✓</span> Texterstellung auf Wunsch</li>
+          <li><span class="check">✓</span> Lieferung in 3–14 Werktagen</li>
+          <li><span class="check">✓</span> Persönliche Betreuung auf Deutsch</li>
+          <li><span class="check">✓</span> <button type="button" class="domain-info-trigger" data-domain-info-open aria-haspopup="dialog" aria-controls="domainInfoModal">Domain</button> inklusive bis zu einem Wert von 30€ pro Jahr<br>- Höherpreisige Domains nach Absprache</li>
+        </ul>
+        <a href="#contact" class="btn-primary" style="width:100%;justify-content:center;font-size:1.05rem;padding:18px;">
+          🚀 Jetzt Website bestellen
+        </a>
+        <p class="pricing-note">💬 Fragen? Hier ist mein WhatsApp – ich antworte schnell!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual reveal">
+        <div class="about-avatar-wrap">
+          <div class="about-avatar-bg">
+            👨‍💻
+            <div class="about-float-badge badge-tl">🇩🇪 Deutschsprachig</div>
+            <div class="about-float-badge badge-br">📍 Paraguay</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-text">
+        <p class="section-label reveal">Über mich</p>
+        <h2 class="section-title reveal">Hallo, ich bin<br>Benjamin Riske</h2>
+        <p class="section-sub reveal">Gründer von Paraguay Websites. Ich lebe in Paraguay und helfe deutschsprachigen Unternehmern, online professionell aufzutreten – ohne Budget zu sprengen.</p>
+        <div class="about-highlight reveal reveal-delay-1">
+          <span class="hl-icon">💰</span>
+          <div class="hl-text">
+            <strong>Faire Preise dank günstigerer Lebenshaltungskosten</strong>
+            <span>Ich lebe in Paraguay – das erlaubt mir, hochwertige Arbeit zu einem Bruchteil üblicher Agentururpreise anzubieten.</span>
+          </div>
+        </div>
+        <div class="about-highlight reveal reveal-delay-2">
+          <span class="hl-icon">🇩🇪</span>
+          <div class="hl-text">
+            <strong>Kommunikation auf Deutsch</strong>
+            <span>Keine Sprachbarrieren. Ich verstehe, was Sie brauchen, und setze es präzise um.</span>
+          </div>
+        </div>
+        <div class="about-highlight reveal reveal-delay-3">
+          <span class="hl-icon">⚡</span>
+          <div class="hl-text">
+            <strong>Schnell & zuverlässig</strong>
+            <span>Klare Abläufe, ehrliche Kommunikation, pünktliche Lieferung. So arbeite ich.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="container">
+    <p class="section-label reveal">Referenzen</p>
+    <h2 class="section-title reveal">Was Kunden sagen</h2>
+    <p class="section-sub reveal">Echte Meinungen von Unternehmern, die mit Paraguay Websites arbeiten.</p>
+    <div class="testi-grid">
+      <div class="testi-card reveal reveal-delay-1">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">„Benjamin hat meine Unternehmenswebsite in unter zwei Wochen geliefert. Das Design ist modern, die Kommunikation war super – und der Preis ist unschlagbar!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar">M</div>
+          <div>
+            <div class="testi-name">Markus H.</div>
+            <div class="testi-role">Handwerksbetrieb, Bayern</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-delay-2">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">„Endlich jemand, der verständlich erklärt, was er macht, und das dann auch wirklich gut umsetzt. Meine neue Website hat mir sofort neue Anfragen gebracht."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">S</div>
+          <div>
+            <div class="testi-name">Sandra K.</div>
+            <div class="testi-role">Freelance-Designerin, Wien</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-delay-3">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">„Professionelles Ergebnis zum fairen Preis. Benjamin war immer erreichbar und hat alle meine Änderungswünsche schnell umgesetzt. Sehr empfehlenswert!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar">T</div>
+          <div>
+            <div class="testi-name">Thomas B.</div>
+            <div class="testi-role">Startup-Gründer, Zürich</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <p class="section-label reveal">Häufige Fragen</p>
+    <h2 class="section-title reveal">Ihre Fragen –<br>meine Antworten</h2>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Wie läuft der Prozess ab?
+          <span class="faq-arrow">+</span>
+        </div>
+        <div class="faq-a"> <p>Ganz einfach:</p>
+
+         <li>-Kurzes Gespräch</li> 
+         <li>-Umsetzung deiner Website</li>
+         <li>-Feedback & Anpassung</li>
+          <li>-Online gehen 🚀 </li>
+          
+         <p> Kein komplizierter Prozess – schnell, klar und effizient.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Was ist im Website-Preis von 249 € enthalten?
+          <span class="faq-arrow">+</span>
+        </div>
+        <div class="faq-a">Du bekommst eine moderne, mobiloptimierte Website, die darauf ausgelegt ist, Kundenanfragen zu generieren – inklusive SEO-Grundlagen und Kontaktformular.
+          Außerdem erhältst du deine eigene Domain mit SSL-Zertifikat und natürlich ein ansprechendes Design.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Wie lange dauert die Umsetzung?
+          <span class="faq-arrow">+</span>
+        </div>
+        <div class="faq-a">In der Regel 3 bis 14 Werktage. Bei umfangreicheren Projekten oder vielen individuellen Wünschen kann es etwas länger dauern.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Benötige ich technisches Wissen?
+          <span class="faq-arrow">+</span>
+        </div>
+        <div class="faq-a"><p>Überhaupt nicht. Ich kümmere mich um alle technischen Aspekte. Du lieferst deine Inhalte (oder wir erarbeiten sie gemeinsam), und ich erstelle die Website.</p>
+
+          <p>Wenn du den monatlichen Service für 39 € nutzt, kümmere ich mich zusätzlich um alles: Updates, kleinere Änderungen, technische Wartung und laufende Betreuung. So bleibt deine Website immer aktuell, sicher und funktionsfähig – ohne dass du dich darum kümmern musst.</p>
+          
+          <p>Auf Wunsch zeige ich dir trotzdem, wie du einfache Änderungen selbst vornehmen kannst.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Was ist mit Hosting und Domain?
+          <span class="faq-arrow">+</span>
+        </div>
+        <div class="faq-a">Hosting und Domain sind nicht im Paketpreis enthalten, aber ich empfehle Ihnen günstige und zuverlässige Anbieter und helfe Ihnen bei der Einrichtung. Typische Kosten: ca. 50–100 € pro Jahr.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Kann ich die Website nachher selbst bearbeiten?
+          <span class="faq-arrow">+</span>
+        </div>
+        <div class="faq-a">Ja, auf Wunsch baue ich die Website mit einem einfachen CMS (Content Management System), sodass Sie Texte und Bilder selbst ändern können – ganz ohne Programmierkenntnisse.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-inner reveal">
+      <div class="contact-icon">💬</div>
+      <p class="section-label" style="text-align:center">Kontakt aufnehmen</p>
+      <h2 class="section-title">Bereit für Ihre<br>neue Website?</h2>
+      <p class="section-sub">Fragen oder gleich starten? Hier ist mein WhatsApp – ich antworte schnell! </p>
+      <a href="https://wa.me/595973772515" target="_blank" class="whatsapp-btn">
+        <span class="whatsapp-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </span>
+        Auf WhatsApp schreiben
+      </a>
+      <p class="contact-number">📱 WhatsApp: <strong>+595 973 772 515</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Paraguay<span>.</span>Websites</div>
+  <p>© 2026 Paraguay Websites · Benjamin Riske · Independencia, Paraguay</p>
+  <p style="margin-top:6px;">Professionelle Websites für deutschsprachige Kunden weltweit</p>
+</footer>
+
+<!-- DOMAIN INFO MODAL -->
+<div class="modal-overlay" id="domainInfoModalOverlay" aria-hidden="true">
+  <div class="modal" id="domainInfoModal" role="dialog" aria-modal="true" aria-labelledby="domainInfoTitle">
+    <button class="modal-close" type="button" data-domain-info-close aria-label="Popup schließen">✕</button>
+    <div class="modal-title" id="domainInfoTitle">Was ist ein Domain?</div>
+    <div class="modal-body">
+      <p class="muted"><strong>Kosten-Hinweis:</strong> Im Paket ist ein Domain bis <strong>30€ / Jahr</strong> inklusive. Kostet der mehr, trägt der Kunde die zusätzlichen Kosten. Das sollte nur in seltenen Fällen (mit sogenannte <strong>Premium-Domains</strong> mit hoher Nachfrage)  <strong>vorkommen</strong></p>
+
+      <p><strong>Ein Domain ist der Name deiner Website im Internet.</strong></p>
+
+      <div class="example">
+        <p><strong>👉 Beispiel:</strong><br>google.com oder deinefirma.de</p>
+        <p>Das ist die Adresse, die Leute im Browser eingeben, um dich zu finden.</p>
+        <p>Mein Domain ist zum beispiel: <strong>paraguaywebsite.org</strong></p>
+      </div>
+
+      <p><strong>Aufbau einer Domain:</strong></p>
+      <div class="example">
+        <p><strong>Beispiel:</strong><br>meinefirma.de</p>
+        <p>meinefirma → dein Name / Marke<br>.de → Endung (für Deutschland)</p>
+        <p>Andere Änderungen: .org / .com / .store / .io usw</p>
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Custom cursor
+  const cursor = document.getElementById('cursor');
+  const ring = document.getElementById('cursorRing');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    cursor.style.left = mx + 'px'; cursor.style.top = my + 'px';
+  });
+  function animRing() {
+    rx += (mx - rx) * 0.12;
+    ry += (my - ry) * 0.12;
+    ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
+    requestAnimationFrame(animRing);
+  }
+  animRing();
+  document.querySelectorAll('a, button, .faq-q, .service-card').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      cursor.style.width = '20px'; cursor.style.height = '20px';
+      ring.style.width = '56px'; ring.style.height = '56px'; ring.style.opacity = '0.8';
+    });
+    el.addEventListener('mouseleave', () => {
+      cursor.style.width = '12px'; cursor.style.height = '12px';
+      ring.style.width = '36px'; ring.style.height = '36px'; ring.style.opacity = '0.5';
+    });
+  });
+
+  // Mobile menu
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+
+  // FAQ
+  function toggleFaq(el) {
+    const item = el.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => observer.observe(el));
+
+  // Sticky nav shadow
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    nav.style.background = window.scrollY > 30 ? 'rgba(6,8,15,0.97)' : 'rgba(6,8,15,0.8)';
+  });
+
+  // Number counter animation
+  function animateCount(el, target, suffix) {
+    let start = 0;
+    const duration = 1800;
+    const step = timestamp => {
+      if (!start) start = timestamp;
+      const progress = Math.min((timestamp - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const val = Math.floor(eased * target);
+      el.innerHTML = `${val}<span>${suffix}</span>`;
+      if (progress < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+  const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const nums = e.target.querySelectorAll('.stat-num');
+        nums[0] && animateCount(nums[0], 249, '€');
+        nums[1] && animateCount(nums[1], 14, 'T');
+        nums[2] && animateCount(nums[2], 39, '€');
+        statsObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  const heroStats = document.querySelector('.hero-stats');
+  if (heroStats) statsObserver.observe(heroStats);
+
+  // Domain info modal
+  const domainOverlay = document.getElementById('domainInfoModalOverlay');
+  const domainModal = document.getElementById('domainInfoModal');
+  const domainCloseBtn = domainOverlay?.querySelector('[data-domain-info-close]');
+  const domainOpenBtns = document.querySelectorAll('[data-domain-info-open]');
+  let lastFocusedEl = null;
+
+  function openDomainModal() {
+    if (!domainOverlay) return;
+    lastFocusedEl = document.activeElement;
+    domainOverlay.classList.add('open');
+    domainOverlay.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    domainCloseBtn && domainCloseBtn.focus();
+  }
+
+  function closeDomainModal() {
+    if (!domainOverlay) return;
+    domainOverlay.classList.remove('open');
+    domainOverlay.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (lastFocusedEl && typeof lastFocusedEl.focus === 'function') lastFocusedEl.focus();
+  }
+
+  domainOpenBtns.forEach(btn => btn.addEventListener('click', openDomainModal));
+  domainCloseBtn && domainCloseBtn.addEventListener('click', closeDomainModal);
+  domainOverlay && domainOverlay.addEventListener('click', (e) => {
+    if (e.target === domainOverlay) closeDomainModal();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && domainOverlay?.classList.contains('open')) closeDomainModal();
+  });
+</script>
+</body>
+</html>
